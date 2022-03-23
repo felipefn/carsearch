@@ -4,15 +4,34 @@ import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
-import { PropaneSharp } from '@mui/icons-material';
+
 
 import { Container, Content } from "./styles";
+import { ConnectingAirportsOutlined } from '@mui/icons-material';
 
-interface PropsInterface {
-  title: string
+interface Models {
+ model: string,
+  
 }
 
-export function AccordionComponent(props:any) {
+
+const BaseUrl = "https://parallelum.com.br/fipe/api/v1"
+
+async function getmodelsApi() {
+  const response = await fetch(`${BaseUrl}/carros/marcas/59/modelos`)
+  const modelos = await response.json()
+
+  console.log(modelos)
+  console.log(modelos?.modelos[0].nome)
+  console.log(modelos?.anos[0])
+  return modelos.map((models:any) => {
+    
+    
+  })
+
+}
+getmodelsApi()
+export function AccordionModels(props:any) {
 
 
   return (
@@ -28,13 +47,15 @@ export function AccordionComponent(props:any) {
           </AccordionSummary>
           <AccordionDetails>
             
-             
+          
               {props.items && props.items.map((item:any) => (
+                
                 <ul key={item.id}>
                   
                   <li>{item.name}</li>
                   
                 </ul> 
+                
               ))}
             
               
