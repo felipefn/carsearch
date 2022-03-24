@@ -27,15 +27,14 @@ export function AccordionComponent(props:any) {
             <Typography>{props.title}</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            
              
-              {props.items && props.items.map((item:any) => (
-                <ul key={item.id}>
+            {props.items && props.items.map((item:any) => (
+               <ul key={item.id}>
                   
-                  <Link to={`models/${item.id}`}> <li>{item.name} </li></Link>
+                <Link to={`modelos/${props.title.toLowerCase().replaceAll("õ","o")}/${item.id}`}> <li>{item.name}</li></Link>
                   
-                </ul> 
-              ))}
+              </ul> 
+            ))}
             
               
             

@@ -8,7 +8,7 @@ export const Rotas = () => {
   return (
     <Routes>
       <Route path="/" exact element={<HomePage />} />
-      <Route path="/Models/:id" exact element={<ModelsPage />} />
+      <Route path="/modelos/:title/:id" exact element={<ModelsPage />} />
     </Routes>
   )
 }
