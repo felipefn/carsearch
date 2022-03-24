@@ -32,7 +32,7 @@ export function AccordionComponent(props:any) {
               {props.items && props.items.map((item:any) => (
                 <ul key={item.id}>
                   
-                  <Link to="/models"> {item.name} </Link>
+                  <Link to={`models/${item.id}`}> <li>{item.name} </li></Link>
                   
                 </ul> 
               ))}

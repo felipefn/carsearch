@@ -20,6 +20,7 @@ export const Content = styled.div`
   li {
     list-style-type: none;
     padding: 5px;
+    text-decoration: none;
   }
   
 

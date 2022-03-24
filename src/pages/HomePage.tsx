@@ -14,7 +14,7 @@ interface Brands {
 
 const BaseUrl = "https://parallelum.com.br/fipe/api/v1"
 
-async function getFromApi(type:string) {
+async function getBrandFromApi(type:string) {
   const response = await fetch(`${BaseUrl}/${type}/marcas`)
   const marcas = await response.json()
 
@@ -35,7 +35,7 @@ const Home = () =>{
   const [cars , setCars] = useState<Array<Brands>>() 
   useEffect(function(){
     async function getCarBrand() {
-      const item = await getFromApi("carros")
+      const item = await getBrandFromApi("carros")
       setCars (item)
       
     }
@@ -46,7 +46,7 @@ const Home = () =>{
   const [motorcycles, setMotorcycles] = useState<Array<Brands>>() 
   useEffect(function(){
     async function getMotorcycleBrand() {
-      const item = await getFromApi("motos")
+      const item = await getBrandFromApi("motos")
       setMotorcycles (item)
       
     }
@@ -57,7 +57,7 @@ const Home = () =>{
   const [trucks, setTrucks] = useState<Array<Brands>>() 
   useEffect(function(){
     async function getTrucksBrand() {
-      const item = await getFromApi("caminhoes")
+      const item = await getBrandFromApi("caminhoes")
       setTrucks (item)
       
     }
@@ -70,7 +70,7 @@ const Home = () =>{
       <GlobalStyle/>
       <Header/>
       <HeroContainer/>
-      <AccordionComponent title="Carros" items={cars } />
+      <AccordionComponent title="Carros" items={cars} />
       <AccordionComponent title="Motos" items={motorcycles}/>
       <AccordionComponent title="Caminhões" items={trucks}/>
       

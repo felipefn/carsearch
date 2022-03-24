@@ -10,30 +10,48 @@ import { Container, Content } from "./styles";
 import { ConnectingAirportsOutlined } from '@mui/icons-material';
 
 interface Models {
- model: string,
+ name: string,
+ id: string
   
 }
 
 
 const BaseUrl = "https://parallelum.com.br/fipe/api/v1"
 
-async function getmodelsApi() {
+async function getModelsApi() {
   const response = await fetch(`${BaseUrl}/carros/marcas/59/modelos`)
-  const modelos = await response.json()
+  const {modelos}= await response.json()
 
-  console.log(modelos)
-  console.log(modelos?.modelos[0].nome)
-  console.log(modelos?.anos[0])
+ 
+  
   return modelos.map((models:any) => {
-    
+    return {
+      name: models.nome,
+      id:models.codigo
+      
+    }
     
   })
 
 }
-getmodelsApi()
+
+
+//.then (x => console.log(x.reverse()))
+
 export function AccordionModels(props:any) {
+  
+  const [models , setModels] = useState<Array<Models>>() 
+  useEffect(function(){
+    async function getModels() {
+      const item = await getModelsApi()
+      setModels (item)
+      
+    }
+    getModels()
 
+  },[])
 
+  console.log(models)
   return (
     <Container>
       <Content>
@@ -43,12 +61,12 @@ export function AccordionModels(props:any) {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography>{props.title}</Typography>
+            <Typography>Modelos</Typography>
           </AccordionSummary>
           <AccordionDetails>
             
           
-              {props.items && props.items.map((item:any) => (
+              {props.items && props.items.reverse((item:any) => (
                 
                 <ul key={item.id}>
                   
