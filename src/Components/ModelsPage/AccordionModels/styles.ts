@@ -49,12 +49,9 @@ export const Content = styled.div`
     font-weight: bold;
   }
 
-  /* @media(min-width: 600px) {
+   @media(max-width: 768px) {
     .accordion {
-      height: 6rem;
-      
-
-   
+      height: 3rem;
     }
 
     .title {
@@ -64,5 +61,5 @@ export const Content = styled.div`
     li {
       font-size: 1.5rem;
     }
-  } */
+  }  
 `

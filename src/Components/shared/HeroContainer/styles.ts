@@ -10,21 +10,20 @@ export const Container = styled.div`
   align-items: center;
   margin-bottom: 3rem;
 
-  /* @media(min-width: 600px) {
-    height: 50rem;
-    width: auto;
-  } */
+     @media(max-width: 768px) {
+    height: 25rem;
+    
+  }   
 
 `
-
-   
 
 export const Content = styled.div`
   background-image: url(${HeroContainerImg});
   width: 80%;
   height: 100%;
   background-size:cover;
-  /* @media(min-width: 600px) {
+
+     @media(max-width: 768px) {
     width: 100%;
-  } */
+  }   
 `

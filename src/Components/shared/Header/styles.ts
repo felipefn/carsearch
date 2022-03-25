@@ -12,13 +12,13 @@ export const Container = styled.header`
     height: 5rem;
   }
   
-  /* @media(min-width: 600px) {
-    height: 10rem;
+    @media(max-width: 768px) {
+    height: 5rem;
 
     img {
-      height: 8rem;
-    }
-  } */
+      height: 5rem;
+    } 
+  }  
   
 
 `

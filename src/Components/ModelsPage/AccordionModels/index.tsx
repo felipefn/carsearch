@@ -57,6 +57,7 @@ export function AccordionModels(id: any) {
             expandIcon={<ExpandMoreIcon className='arrow'/>}
             aria-controls="panel1a-content"
             id="panel1a-header"
+            
           >
             <Typography className='title'>Modelos</Typography>
           </AccordionSummary>
