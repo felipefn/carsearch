@@ -5,10 +5,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
 
-
 import { Container, Content } from "./styles";
-import { useParams } from 'react-router-dom';
-
 
 
 interface Models {
@@ -17,10 +14,7 @@ interface Models {
 
 }
 
-
-
 const BaseUrl = "https://parallelum.com.br/fipe/api/v1"
-
 
 
 async function getModelsApi(props:any) {
@@ -41,9 +35,6 @@ async function getModelsApi(props:any) {
 
 }
 
-
-// .then (x => console.log(x.reverse()))
-
 export function AccordionModels(id: any) {
 
   const [models, setModels] = useState<Array<Models>>()
@@ -57,21 +48,19 @@ export function AccordionModels(id: any) {
     
   }, [])
 
-
-  console.log(models?.reverse())
   
   return (
     <Container>
       <Content>
         <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+          <AccordionSummary className='accordion'
+            expandIcon={<ExpandMoreIcon className='arrow'/>}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography>Modelos</Typography>
+            <Typography className='title'>Modelos</Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails className='AccordionDetails'>
 
             
             {models && models.map((item: any) => (
@@ -83,8 +72,6 @@ export function AccordionModels(id: any) {
               </ul>
 
             ))}
-
-
 
           </AccordionDetails>
         </Accordion>

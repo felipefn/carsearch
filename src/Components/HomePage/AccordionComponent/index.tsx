@@ -12,26 +12,32 @@ interface PropsInterface {
   title: string
 }
 
+
 export function AccordionComponent(props:any) {
 
 
   return (
     <Container>
       <Content>
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMoreIcon />}
+        <Accordion >
+          <AccordionSummary className='accordion'
+            expandIcon={<ExpandMoreIcon className='arrow' />}
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography>{props.title}</Typography>
+            <Typography className='title'>{props.title}</Typography>
           </AccordionSummary>
-          <AccordionDetails>
+          <AccordionDetails className='AccordionDetails'>
              
             {props.items && props.items.map((item:any) => (
                <ul key={item.id}>
                   
-                <Link to={`modelos/${props.title.toLowerCase().replaceAll("õ","o")}/${item.id}`}> <li>{item.name}</li></Link>
+                <Link 
+                  style={{ color: 'inherit', textDecoration: 'inherit'}}
+                 to={`modelos/${props.title.toLowerCase().replaceAll("õ","o")}/${item.id}`
+                }> 
+                  <li>{item.name}</li>
+                </Link>
                   
               </ul> 
             ))}
