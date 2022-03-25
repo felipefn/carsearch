@@ -7,13 +7,14 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  box-sizing: border-box ;
   margin: 0;
-  padding: 10px;
+  padding: 10px 0;
 
   
 `
 export const Content = styled.div`
-  width: 50rem;
+  width: 50%;
 
   .arrow {
     color: #FFFFFF;
@@ -49,17 +50,19 @@ export const Content = styled.div`
     font-weight: bold;
   }
 
-   @media(max-width: 768px) {
-    .accordion {
-      height: 3rem;
-    }
+  @media(max-width: 768px) {
+      width: 100%;
+      .accordion {
+        height: 3rem;
+          
+      }
 
-    .title {
-    font-size: 2rem;
-    }
-
-    li {
+      .title {
       font-size: 1.5rem;
-    }
-  }  
+      }
+
+      li{
+        font-size: 1.5rem;
+      }
+  }   
 `

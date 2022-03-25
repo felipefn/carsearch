@@ -56,8 +56,7 @@ export const Content = styled.div`
   li {
     list-style-type: none;
     padding: 5px;
-    color: #0B3A5E;
-    
+    color: #0B3A5E;    
     font-weight: bold;
   }
   
