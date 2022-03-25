@@ -2,18 +2,18 @@
 
 ![image](https://user-images.githubusercontent.com/42528414/160157251-ab871671-6667-45c7-bc12-91d5eb3fdcd4.png)
 <div align="center">
-<a href="carsearch.vercel.app">Open Car Search</a>
+<a href="https://carsearch-kwopb8k9u-felipefn.vercel.app">Open Car Search</a>
 
 
 <p align="center">
   <h2>Summary</h2>
-  <a href="#rocket-Desafio Teórico">Desafio Teórico</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#information_source-how-to-use">Tecnologias Usadas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#black_square_button-architecture">Desafio Prático</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-desafio-teórico">Desafio Teórico</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#information_source-tecnologias-usadas">Tecnologias Usadas</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#black_square_button-desafio-prático">Desafio Prático</a>
 </p>
 </div>
 
-## :rocket: Desafio Teórico
+## :rocket: Desafio teórico
 
 
 
@@ -53,13 +53,15 @@
 	R:
 
 
-## Tecnologias usadas
+## :information_source: Tecnologias usadas
 - [TypeScript](https://www.typescriptlang.org/)
 - [ReactJS](https://reactjs.org/)
 - [React Router](https://github.com/ReactTraining/react-router)
 - [styled-components](https://www.styled-components.com/)
 - [mui](https://mui.com)
-## :rocket: Desafio Prático
+
+
+## :black_square_button: Desafio Prático
 
 ```bash
 # Clone this repository
